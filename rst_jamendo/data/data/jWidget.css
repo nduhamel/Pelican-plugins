@@ -1,0 +1,200 @@
+/*
+  Copyright (C) 2010 - Thomas Baquet (aka Lord BlackFox)
+  http://bitbucket.org/lord_blackfox/
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+div.jw-widget {
+  background-image: url(background.jpg);
+  background-repeat: none;
+  width: 300px;
+  height: 130px;
+  padding: 0px;
+}
+
+div.jw-panels {
+  background-color: #ffffff;
+  
+  height: 74px;
+  margin: 3px;
+  padding: 5px;
+  padding-top: 3px;
+
+  overflow: auto;
+
+  font-size: 10pt;
+  
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+div.jw-panels > div:first-child {
+  height: 45px;
+  
+  
+  font-weight: bold;
+  font-family: Verdana, Tahoma, Helvetica, Sans-Serif;
+  text-align:center;
+  color: grey;
+  
+  padding-top: 25px;
+}
+
+
+/*** main body ***/
+div.jw-artist {
+  color: #ee9900;
+  font-weight: bold;
+  font-family: Verdana, Tahoma, Helvetica, Sans-Serif;
+  
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+div.jw-title {
+  font-size: 9pt;
+  
+  margin-top: 3px;
+  margin-left: 60px;
+
+  height: 15px !important;
+  
+  overflow: hidden;
+}
+
+div.jw-progressbar {
+  height: 5px;
+  width: 220px;
+
+  margin-left: 0px;
+  margin-bottom: 1px;
+  
+  border: 2px #ddd solid;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+span.jw-progressbar {
+  height: 3px;
+  border-top: 2px #eecc00 solid;
+  background-color: #ee9900;
+  
+  display: block;
+  width: 0px;
+}
+span.jw-progressbar-pos {
+  float: right;
+  font-weight: bold;
+  font-size: 9pt;
+  
+  margin-top: -4px;
+}
+
+div.jw-volumebar {
+  height: 5px;
+  width: 100px;
+
+  float: right;
+  margin-left: 0px;
+  margin-bottom: 1px;
+  margin-top: -5px;
+  
+  border: 2px #ddd solid;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+span.jw-volumebar {
+  height: 3px;
+  border-top: 2px #eecc00 solid;
+  background-color: #ee9900;
+  
+  display: block;
+  width: 0px;
+}
+
+img.jw-cover {
+  float: left;
+  width: 44px;
+  height: 44px;
+
+  border: 2px white solid;
+
+  box-shadow: 1px 1px 10px #aaa; 
+  -moz-box-shadow: 1px 1px 10px #aaa; 
+  -webkit-box-shadow: 1px 1px 10px #aaa; 
+}
+
+
+/*** Header ***/
+div.jw-header {
+  width: 100%;
+  height: 36px !important;
+  margin: 2px;
+  padding-top: 4px;
+
+  overflow: hidden;
+}
+
+.jw-header-title {
+  vertical-align: middle;
+  display: inline;
+
+  height: 14px;
+  width: 50px;
+
+  color: white;
+  font-family: Verdana, Tahoma, Helvetica, Sans-Serif;
+  font-size: 10pt;
+}
+
+div.jw-header > img {
+  cursor: pointer;
+  margin: 0px;
+  vertical-align: middle;
+}
+
+/*** Sidebar ***/
+div.jw-side > img, div.jw-side > a > img {
+  cursor: pointer;
+  margin-bottom: 4px;
+  
+  border: 0px transparent;
+}
+div.jw-side {
+  float: right;
+  width: 16px;
+  
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+/*** Playlist ***/
+div.jw-select-track {
+  font-size: 8pt;
+  background-image: url(unselected.png);
+  
+  margin-right: -5px;
+
+  cursor: pointer;
+}
+div.jw-select-track[selected], div.jw-select-track:hover {
+  background-image: url(selected.png);
+}
+
+/*** Buttons: ***/
+img.prev {
+  background-image: url(prev.png);
+}
+
