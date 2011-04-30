@@ -1,0 +1,72 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="jWidget.css"/>
+  <script src="jWidget.js"></script>
+  <script>
+    var player;
+  
+    function init () {
+        var uri = new String(document.location);
+        var pos = uri.indexOf("?");
+        if(pos < 0 || pos == uri.size)
+          return;
+        
+        var GET = new Array();
+        //default values:
+        GET["id"] = 0;
+        GET["type"] ="album";
+        GET['autoplay'] = false;
+        
+        var args = uri.substr(pos+1).split('&');
+        var arg;
+        
+        for(var i in args) {
+          arg = args[i].split('=');
+          GET[arg[0]] = (arg[1]) ? arg[1] : true;
+        }
+        
+        
+        player = new jwPlayer(GET["id"], GET["type"], "jw_", GET['autoplay'], true); 
+    }
+  </script>
+</head>
+<body style="margin:0px;padding:0px" onload="init();">
+<div class="jw-widget">
+  <div class="jw-header">
+    <img src="prev.png" id="jw_button-prev"><img src="play.png" id="jw_button-play"><img src="next.png" id="jw_button-next">
+    <div class="jw-header-title">
+      <span id="jw_album"></span>
+    </div>
+  </div>
+  <div class="jw-side">
+    <img src="playlist.png" id="jw_button-playlist">
+    <br><br>
+    <a href="#" target=_new><img src="get.png" id="jw_button-get"></a>
+    <a href="#" target=_new><img src="page.png" id="jw_button-page"></a>
+  </div>
+  <div class="jw-panels">
+    <div id="jw_panel-notifs"><img src="load.gif" style="vertical-align: middle;"/> Loading</div>
+    <div id="jw_panel-main" style="display:none">
+      <div class="jw-volumebar">
+        <span class="jw-volumebar" id="jw_volumebar"></span>
+      </div>
+      <img class="jw-cover" id="jw_cover">
+      <div class="jw-artist" id="jw_artist">&nbsp;</div>
+      <div class="jw-title" id="jw_title">&nbsp;</div>
+      <br>
+      <div>
+        <span class="jw-progressbar-pos" id="jw_progressbarpos"></span>
+        <div class="jw-progressbar">
+          <span class="jw-progressbar" id="jw_progressbar"></span>
+        </div>
+      </div>
+    </div>
+    <div id="jw_panel-playlist" style="display:none;">
+    </div>
+  </div>
+  <audio id="jw_audio" class="jw-audio">
+    You need a recent navigator
+  </audio>
+</div>
+</body>
+</html>
